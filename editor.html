@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Server Editor</title>
+<link rel="stylesheet" href="css/server.css">
+<script src="libs/monaco/min/vs/loader.js"></script>
+<script>
+require.config({ paths: { 'vs': 'libs/monaco/min/vs' }});
+require(['vs/editor/editor.main'], function() {});
+</script>
+</head>
+<body>
+<h1>Advanced Server Editor</h1>
+
+<div id="editor-container">
+    <div id="html-editor" style="height:250px;"></div>
+    <div id="css-editor" style="height:250px;"></div>
+    <div id="js-editor" style="height:250px;"></div>
+</div>
+
+<button id="verify-btn">Send Verification Code</button>
+<input id="verification-code" placeholder="Enter Code" />
+<button id="publish-btn">Publish</button>
+
+<script type="module" src="js/supabase.js"></script>
+<script type="module" src="js/editor.js"></script>
+</body>
+</html>
