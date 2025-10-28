@@ -1,1 +1,24 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Server</title>
+<link rel="stylesheet" href="css/server.css">
+<script src="libs/monaco/min/vs/loader.js"></script>
+<script>
+require.config({ paths: { 'vs': 'libs/monaco/min/vs' }});
+require(['vs/editor/editor.main'], function() {});
+</script>
+</head>
+<body>
+<h1>Create Your Mini Server</h1>
+<div id="editor-container">
+    <div id="html-editor" style="height:200px;"></div>
+    <div id="css-editor" style="height:200px;"></div>
+    <div id="js-editor" style="height:200px;"></div>
+</div>
+<button id="publish-btn">Publish</button>
+<script type="module" src="js/supabase.js"></script>
+<script type="module" src="js/server.js"></script>
+</body>
+</html>
